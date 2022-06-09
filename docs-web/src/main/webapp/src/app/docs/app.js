@@ -364,16 +364,6 @@ angular.module('docs',
         }
       }
     })
-    .state('user', {
-      url: '/user',
-      abstract: true,
-      views: {
-        'page': {
-          templateUrl: 'partial/docs/usergroup.html',
-          controller: 'UserGroup'
-        }
-      }
-    })
     .state('user.default', {
       url: '',
       views: {
@@ -388,16 +378,6 @@ angular.module('docs',
         'sub': {
           templateUrl: 'partial/docs/user.profile.html',
           controller: 'UserProfile'
-        }
-      }
-    })
-    .state('group', {
-      url: '/group',
-      abstract: true,
-      views: {
-        'page': {
-          templateUrl: 'partial/docs/usergroup.html',
-          controller: 'UserGroup'
         }
       }
     })

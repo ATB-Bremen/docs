@@ -90,8 +90,8 @@ public final class EMF {
             props.put("hibernate.connection.url", "jdbc:h2:file:" + dbFile + ";CACHE_SIZE=65536;LOCK_TIMEOUT=10000");
             props.put("hibernate.connection.username", "sa");
         } else {
-            props.put("hibernate.connection.driver_class", "org.postgresql.Driver");
-            props.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQL94Dialect");
+            //props.put("hibernate.connection.driver_class", "org.postgresql.Driver");
+            props.put("hibernate.dialect", "org.hibernate.dialect.MariaDB103Dialect");
             props.put("hibernate.connection.url", databaseUrl);
             props.put("hibernate.connection.username", databaseUsername);
             props.put("hibernate.connection.password", databasePassword);
