@@ -21,7 +21,7 @@ jobs:
       - name: Install test dependencies
         run: sudo apt-get -y -q --no-install-recommends install ffmpeg mediainfo tesseract-ocr tesseract-ocr-deu
       - name: Build with Maven
-        run: mvn -Pprod clean install
+        run: mvn -Pprod -DskipTests -DencorePortalRedirectUrl=http://localhost:8081 clean install
       - name: Upload war artifact
         uses: actions/upload-artifact@v2
         with:
@@ -58,19 +58,18 @@ jobs:
         id: metadata
         uses: docker/metadata-action@v3
         with:
-          images: sismics/docs
+          images: encore/dms
           flavor: |
             latest=false
           tags: |
             type=ref,event=tag
             type=raw,value=latest,enable=${{ github.ref_type != 'tag' }}
           labels: |
-            org.opencontainers.image.title = Teedy
-            org.opencontainers.image.description = Teedy is an open source, lightweight document management system for individuals and businesses.
+            org.opencontainers.image.title = Teedy-Encore
+            org.opencontainers.image.description = Teedy DMS with adjustments for the ENCORE project
             org.opencontainers.image.created = ${{ github.event_created_at }}
-            org.opencontainers.image.author = Sismics
-            org.opencontainers.image.url = https://teedy.io/
-            org.opencontainers.image.vendor = Sismics
+            org.opencontainers.image.author = ATB
+            org.opencontainers.image.url = https://encorebim.eu/
             org.opencontainers.image.license = GPLv2
             org.opencontainers.image.version = ${{ github.event_head_commit.id }}
       - 
