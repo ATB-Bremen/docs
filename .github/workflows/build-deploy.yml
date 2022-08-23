@@ -58,7 +58,7 @@ jobs:
         id: metadata
         uses: docker/metadata-action@v3
         with:
-          images: encore/dms
+          images: encorebim/dms
           flavor: |
             latest=false
           tags: |
