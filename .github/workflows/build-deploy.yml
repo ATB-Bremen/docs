@@ -61,10 +61,10 @@ jobs:
           images: encorebim/dms
           flavor: |
             latest=false
-          # set custom docker image tag and always add latest-test 
+          # set custom docker image tag and latest tag 
           tags: |
-            type=raw,value={{date 'YYYY-MM-DD'}}_{{sha}}_TEST
-            type=raw,value=latest-test
+            type=raw,value={{date 'YYYY-MM-DD'}}_{{sha}}
+            type=raw,value=latest
           labels: |
             org.opencontainers.image.title = Teedy-Encore
             org.opencontainers.image.description = Teedy DMS with adjustments for the ENCORE project
