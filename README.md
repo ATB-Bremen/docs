@@ -1,3 +1,18 @@
+# Encore DMS
+The Encore Project, aims to boost the renovation industry and increase the share of renovated stock in Europe by providing effective and affordable BIM tools that cover the whole renovation life-cycle to achieve higher energy efficiency and comfort levels.
+
+The encore portal is a web application which integrates several encore solutions. To provide file management capabilites, the open source dms "teedy" was forked and adjusted to the needs of the encore portal.
+
+## How to build and run
+Make sure NPM and grunt are installed on your local machine. Npm is included in the Node.js installer, which can be downloaded [here](https://nodejs.org/en/download/) for windows. Run `npm install -g grunt-cli` to install grunt (if grunt is not installed, the antrun maven goal will fail, because it is trying to execute a grunt command on the command line)
+
+In the root folder of this project,
+ - run `mvn -Pprod -DskipTests clean install` in order to build the .war file
+ - run `docker build -t encore-dms:local-dev-snapshot .` to create the teedy docker image locally
+
+
+# Original Readme
+
 <h3 align="center">
   <img src="https://teedy.io/img/github-title.png" alt="Teedy" width=500 />
 </h3>
