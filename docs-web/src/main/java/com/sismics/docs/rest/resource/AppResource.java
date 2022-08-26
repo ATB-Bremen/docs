@@ -84,7 +84,6 @@ public class AppResource extends BaseResource {
     public Response info() {
         ResourceBundle configBundle = ConfigUtil.getConfigBundle();
         String currentVersion = configBundle.getString("api.current_version");
-        String encorePortalUrl = configBundle.getString("encore.portal_url");
         String minVersion = configBundle.getString("api.min_version");
         Boolean guestLogin = ConfigUtil.getConfigBooleanValue(ConfigType.GUEST_LOGIN);
         String defaultLanguage = ConfigUtil.getConfigStringValue(ConfigType.DEFAULT_LANGUAGE);
@@ -95,6 +94,7 @@ public class AppResource extends BaseResource {
         if (!Strings.isNullOrEmpty(globalQuotaStr)) {
             globalQuota = Long.valueOf(globalQuotaStr);
         }
+        String encorePortalUrl = System.getenv("ENCORE_PORTAL_REDIRECT_URL_ENV");
 
         JsonObjectBuilder response = Json.createObjectBuilder()
                 .add("current_version", currentVersion.replace("-SNAPSHOT", ""))
