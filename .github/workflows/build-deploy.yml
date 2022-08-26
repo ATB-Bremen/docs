@@ -63,7 +63,7 @@ jobs:
             latest=false
           # set custom docker image tag and always add latest-test 
           tags: |
-            type=raw,value={{date 'Y-M-D'}}_{{sha}}_TEST
+            type=raw,value={{date 'YYYY-MM-DD'}}_{{sha}}_TEST
             type=raw,value=latest-test
           labels: |
             org.opencontainers.image.title = Teedy-Encore
