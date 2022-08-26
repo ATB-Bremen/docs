@@ -1,11 +1,13 @@
 #!/bin/bash
 
-mvn -Pprod -DskipTests -DencorePortalRedirectUrl=https://test.encorebim.eu clean install
+# This script is just for testing the teedy build against the atb gitlab container registry
+
+mvn -Pprod -DskipTests clean install
 
 # Build test image
-LATEST_COMMIT_TIMESTAMP=$(git log -1 --format=%cd_%h --date=format:'%Y-%m-%d')
+LATEST_COMMIT_TIMESTAMP_AND_HASH=$(git log -1 --format=%cd_%h --date=format:'%Y-%m-%d')
 
-DOCKER_IMAGE_TAG="gitlab.atb-bremen.de:5555/encore/deployment/dms:${LATEST_COMMIT_TIMESTAMP}_TEST"
+DOCKER_IMAGE_TAG="gitlab.atb-bremen.de:5555/encore/deployment/dms:${LATEST_COMMIT_TIMESTAMP_AND_HASH}"
 
 echo "building docker image with tag ${DOCKER_IMAGE_TAG}.."
 
