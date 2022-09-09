@@ -11,7 +11,9 @@ In the root folder of this project,
  - run `docker build -t encore-dms:local-dev-snapshot .` to create the teedy docker image locally
 
 ## How to build image and push to Dockerhub via Github Actions Workflow
- - The workflow will be triggered when pushing to the master branch OR when a commit is tagged via git with a tag of the format "v*" (e.g. v0.4)
+ - The workflow will be triggered when 
+   - pushing to the master branch OR
+   -  when a commit is tagged via git with a tag of the format "v*" (e.g. v0.4). This can be done on the commandline when the latest commit or the one currently checkout should be tagged by running `git tag v0.4` and `git push --tags`
  - The newly built image will be pushed to the [encorebim dms dockerhub repositry](https://hub.docker.com/repository/docker/encorebim/dms) 
 
 
