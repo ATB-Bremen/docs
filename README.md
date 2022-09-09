@@ -10,6 +10,10 @@ In the root folder of this project,
  - run `mvn -Pprod -DskipTests clean install` in order to build the .war file
  - run `docker build -t encore-dms:local-dev-snapshot .` to create the teedy docker image locally
 
+## How to build image and push to Dockerhub via Github Actions Workflow
+ - The workflow will be triggered when pushing to the master branch OR when a commit is tagged via git with a tag of the format "v*" (e.g. v0.4)
+ - The newly built image will be pushed to the [encorebim dms dockerhub repositry](https://hub.docker.com/repository/docker/encorebim/dms) 
+
 
 # Original Readme
 
