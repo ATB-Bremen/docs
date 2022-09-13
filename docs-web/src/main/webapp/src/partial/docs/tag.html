@@ -21,7 +21,7 @@
         </div>
         <div class="form-group" ng-class="{ 'has-error': !tagForm.name.$valid && tagForm.$dirty }">
           <input type="text" name="name" ng-attr-placeholder="{{ 'tag.new_tag' | translate }}" class="form-control"
-                 ng-maxlength="36" required ng-model="tag.name" ui-validate="{ space: '!$value || $value.indexOf(\' \') == -1 && $value.indexOf(\':\') == -1' }">
+                 ng-maxlength="50" required ng-model="tag.name" ui-validate="{ space: '!$value || $value.indexOf(\' \') == -1 && $value.indexOf(\':\') == -1' }">
         </div>
         <span class="btn btn-primary" ng-disabled="!tagForm.$valid" ng-click="addTag()">{{ 'add' | translate }}</span>
         <span class="text-danger" ng-show="tagForm.name.$error.space && tagForm.$dirty">{{ 'validation.no_space' | translate }}</span>

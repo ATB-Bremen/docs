@@ -175,7 +175,7 @@ public class TagResource extends BaseResource {
         }
         
         // Validate input data
-        name = ValidationUtil.validateLength(name, "name", 1, 36, false);
+        name = ValidationUtil.validateLength(name, "name", 1, 50, false);
         ValidationUtil.validateHexColor(color, "color", true);
         ValidationUtil.validateTagName(name);
 

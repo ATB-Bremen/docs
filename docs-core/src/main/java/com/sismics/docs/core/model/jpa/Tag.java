@@ -27,7 +27,7 @@ public class Tag implements Loggable {
     /**
      * Tag name.
      */
-    @Column(name = "TAG_NAME_C", nullable = false, length = 36)
+    @Column(name = "TAG_NAME_C", nullable = false, length = 50)
     private String name;
     
     /**
