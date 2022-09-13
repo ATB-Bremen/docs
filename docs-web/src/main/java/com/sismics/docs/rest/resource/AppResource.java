@@ -94,9 +94,12 @@ public class AppResource extends BaseResource {
         if (!Strings.isNullOrEmpty(globalQuotaStr)) {
             globalQuota = Long.valueOf(globalQuotaStr);
         }
+        
+        String encorePortalUrl = System.getenv("ENCORE_PORTAL_REDIRECT_URL_ENV");
 
         JsonObjectBuilder response = Json.createObjectBuilder()
                 .add("current_version", currentVersion.replace("-SNAPSHOT", ""))
+                .add("encore_portal_url", encorePortalUrl)
                 .add("min_version", minVersion)
                 .add("guest_login", guestLogin)
                 .add("default_language", defaultLanguage)
