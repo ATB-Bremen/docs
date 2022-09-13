@@ -62,6 +62,7 @@
     <org.apache.maven.plugins.maven-war-plugin.version>3.3.1</org.apache.maven.plugins.maven-war-plugin.version>
     <org.apache.maven.plugins.maven-surefire-plugin.version>3.0.0-M5</org.apache.maven.plugins.maven-surefire-plugin.version>
     <org.eclipse.jetty.jetty-maven-plugin.version>9.4.36.v20210114</org.eclipse.jetty.jetty-maven-plugin.version>
+
   </properties>
   
   <scm>
