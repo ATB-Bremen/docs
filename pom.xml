@@ -44,7 +44,7 @@
     <com.twelvemonkeys.imageio.version>3.6.2</com.twelvemonkeys.imageio.version>
     <com.levigo.jbig2.levigo-jbig2-imageio.version>2.0</com.levigo.jbig2.levigo-jbig2-imageio.version>
     <com.github.jai-imageio.jai-imageio-jpeg2000.version>1.4.0</com.github.jai-imageio.jai-imageio-jpeg2000.version>
-    <org.postgresql.postgresql.version>42.2.18</org.postgresql.postgresql.version>
+    <org.postgresql.postgresql.version>42.3.8</org.postgresql.postgresql.version>
     <org.subethamail.subethasmtp-wiser.version>1.2</org.subethamail.subethasmtp-wiser.version>
     <com.icegreen.greenmail.version>1.5.8</com.icegreen.greenmail.version>
     <com.sun.mail.javax.mail.version>1.6.2</com.sun.mail.javax.mail.version>
